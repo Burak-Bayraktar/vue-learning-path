@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <button class="btn btn-sm btn-primary" @click="showContainer = !showContainer">Aç / Kapat</button>
+        <h3 v-if="showContainer" class="text-danger">BAŞLANGIÇTA GÖZÜKECEK</h3>
+        <h3 v-else class="text-primary">SONRA GÖZÜKECEK</h3>
+
+        <hr />
+
+        <h3 
+            style="margin-left: 20px; font-weight: bold" 
+            :style="handleTextColor"
+            :class="handleBgColor"
+        >
+            {{ counter }}
+        </h3>
+        <button class="btn btn-sm btn-success" style="margin-inline-end: 5px;" @click="counter++">Arttır</button>
+        <button class="btn btn-sm btn-danger" @click="counter--">Azalt</button>
+        
+        <p v-if="counter < 0">Counter negatif</p>
+        <p v-else-if="counter > 0">Counter pozitif</p>
+        <p v-else="counter == 0">Counter 0</p>
+
+        <p v-show="counter > 0">OKEY</p>
+        <p v-show="counter < 0">NOPE</p>
+        <p v-show="counter == 0">KEEP GOING</p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
