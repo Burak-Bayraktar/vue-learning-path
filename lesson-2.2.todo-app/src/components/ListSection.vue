@@ -1,5 +1,5 @@
 <template>
-    <todo-list :data="todoList" @delete-item="deleteItem" />
+    <todo-list :data="todoList" @delete-item="$emit('delete-item', $event)" />
     <result-bar :item-count="todoList.length" />
 </template>
 
@@ -12,6 +12,7 @@ export default {
         TodoList,
         ResultBar
     },
-    inject: ["todoList"]
+    inject: ["todoList"],
+    emits: ["delete-item"]
 }
 </script>

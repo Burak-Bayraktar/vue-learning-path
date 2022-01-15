@@ -4,7 +4,7 @@
             v-for="todo in todoList" 
             :key="todo.id" 
             :item="todo" 
-            @delete-todo-item="$emit('delete-item', $event)" 
+            @delete-item="$emit('delete-item', $event)" 
         />
     </ul>
 </template>
@@ -24,5 +24,6 @@ export default {
     components: {
         TodoListItem
     },
+    emits: ["delete-item"]
 }
 </script>

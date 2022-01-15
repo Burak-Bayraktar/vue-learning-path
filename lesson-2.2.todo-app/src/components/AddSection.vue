@@ -20,6 +20,7 @@ export default {
             this.$emit("add-todo", this.todoText)
             this.todoText = null;
         }
-    }
+    },
+    emits: ["add-todo"]
 }
 </script>

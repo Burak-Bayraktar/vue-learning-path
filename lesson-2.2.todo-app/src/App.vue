@@ -3,7 +3,7 @@
         <h3 class="text-center">Todo App</h3>
         <add-section @add-todo="addItem" />
         <hr class="my-2">
-        <list-section />
+        <list-section @delete-item="deleteItem" />
     </div>
 </template>
 
@@ -43,6 +43,7 @@ export default {
             todo = "";
         },
         deleteItem(id) {
+            console.log("hi")
             const itemToDelete = this.todoList.findIndex((item) => item.id === id);
             this.todoList.splice(itemToDelete, 1);
         }
