@@ -1,0 +1,20 @@
+{
+    "filters": [
+        {
+            "id": 1,
+            "type": "Tümü"
+        },
+        {
+            "id": 2,
+            "type": "Elektronik"
+        },
+        {
+            "id": 3,
+            "type": "Plastik"
+        },
+        {
+            "id": 4,
+            "type": "Mobilya"
+        }
+    ]
+}

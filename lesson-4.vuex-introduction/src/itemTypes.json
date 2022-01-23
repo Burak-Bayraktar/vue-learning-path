@@ -1,0 +1,16 @@
+{
+    "itemTypes": [
+        {
+            "id": 1,
+            "type": "Elektronik"
+        },
+        {
+            "id": 2,
+            "type": "Plastik"
+        },
+        {
+            "id": 3,
+            "type": "Mobilya"
+        }
+    ]
+}
