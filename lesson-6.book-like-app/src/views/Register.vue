@@ -23,7 +23,9 @@ export default {
       userData: {
         username: null,
         fullname: null,
-        password: null
+        password: null,
+        likes: [],
+        bookmarks: []
       }
     }
   },
@@ -31,7 +33,7 @@ export default {
     onSave() {
       const password = CryptoJS.HmacSHA1(this.userData.password, this.$store.getters._saltKey).toString();
 
-      this.$axios.post("/users", { ...this.userData, password }).then((res) => {
+      this.$axios.post("/users", { ...this.userData, password }).then(() => {
         this.$router.push({ name: 'HomePage' })
       })
     }

@@ -21,7 +21,22 @@ const routes = [
         name: "NewBookmarkPage",
         path: "/new",
         component: () => import("../src/views/NewBookmark.vue")
-    }
+    },
+    {
+        name: "FavoritesPage",
+        path: "/favorites",
+        component: () => import("../src/views/Account.vue")
+    },
+    {
+        name: "LikesPage",
+        path: "/likes",
+        component: () => import("../src/views/Account.vue")
+    },
+    {
+        name: "SettingsPage",
+        path: "/settings",
+        component: () => import("../src/views/Account.vue")
+    },
 ];
 
 const router = createRouter({
